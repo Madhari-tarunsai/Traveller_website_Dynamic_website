@@ -206,7 +206,7 @@ body {
   flex-direction: column;
   align-items: start;
   gap: 20px;
-  width: 50%; /* Ensures the contact form takes up half of the available space */
+  width: 50%;
 }
 
 .contact-left-title h2 {
@@ -262,8 +262,8 @@ body {
 }
 
 .contact-container img {
-  width: 45%; /* Adjust image width */
-  object-fit: cover; /* Ensures the image maintains its aspect ratio while filling the space */
+  width: 45%; 
+  object-fit: cover; 
 }
 
 @media (max-width: 1024px) {
@@ -392,7 +392,7 @@ footer {
   }
 }
 
-/* Small Devices (Mobile Phones, 480px and down) */
+
 @media (max-width: 480px) {
   .social-icons {
     display: flex;
