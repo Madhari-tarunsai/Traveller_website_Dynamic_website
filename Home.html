@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour_Planner_Website</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="Main_Navbar">
+      <h1>Trav<span>log</span>  <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png" alt=""></h1>
+
+      <button class="toggle-btn" onclick="toggleNavbar()">☰</button>
+
+      <div class="Middle_Navbar" id="middleNav">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Popular</a>
+        <a href="">Services</a>
+        <a href="">Places</a>
+      </div>
+
+      <div class="Left_Navbar" id="leftNav">
+        <span>Admin</span>
+        <span>Login</span>
+      </div>
+    </div>
+
+    <script>
+      function toggleNavbar() {
+        const middleNav = document.getElementById("middleNav");
+        const leftNav = document.getElementById("leftNav");
+
+        middleNav.classList.toggle("active");
+        leftNav.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
