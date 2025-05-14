@@ -3,11 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: Arial, sans-serif;
 }
-
 .Main_Navbar {
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -17,36 +15,34 @@ body {
   align-items: center;
   padding: 15px;
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-
 .Main_Navbar > h1 span {
   color: orange;
 }
 .Main_Navbar > h1 img {
-  height: 35px; 
+  height: 35px;
   width: 35px;
 }
-
-
 .Middle_Navbar,
 .Left_Navbar {
   display: flex;
   justify-content: center;
   gap: 40px;
 }
-
 .Middle_Navbar > a {
   font-size: large;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
   color: black;
 }
-
 .Middle_Navbar > a:hover {
   text-decoration: underline;
   cursor: pointer;
+  color: #fbb034;
 }
-
 .Left_Navbar > span {
   font-size: large;
   border: none;
@@ -56,7 +52,6 @@ body {
   padding: 4px 8px;
   cursor: pointer;
 }
-
 .toggle-btn {
   display: none;
   background: none;
@@ -65,12 +60,10 @@ body {
   border: none;
   cursor: pointer;
 }
-
 @media (max-width: 768px) {
   .toggle-btn {
     display: block;
   }
-
   #middleNav,
   #leftNav {
     display: none;
@@ -82,14 +75,99 @@ body {
     padding: 10px;
     margin-top: 10px;
   }
-
   #middleNav.active,
   #leftNav.active {
     display: flex;
   }
-
   .Main_Navbar {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+/* home page */
+::-webkit-scrollbar {
+  display: none;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 8%;
+  background: #fff8f0;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+.content {
+  flex: 1 1 45%;
+  max-width: 600px;
+}
+.tagline {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ff5d00;
+  margin-bottom: 1rem;
+  font-size: larger;
+}
+.headline {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  color: #1a1a2e;
+}
+.highlight {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.2em;
+  width: 100%;
+  height: 0.3em;
+  background: #ffcab0;
+  z-index: -1;
+  border-radius: 10px;
+}
+.description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.btn {
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.btn.primary {
+  background: #fbb034;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(251, 176, 52, 0.4);
+}
+.btn.primary:hover {
+  background: #ffa500;
+}
+.btn.demo {
+  background: none;
+  color: #ff5d00;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.image {
+  flex: 1 1 45%;
+  text-align: center;
+}
+.image img {
+  max-width: 100%;
+  height: auto;
 }

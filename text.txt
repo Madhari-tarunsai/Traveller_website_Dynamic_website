@@ -1,0 +1,15 @@
+<section class="banner">
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="text">
+      <h1>Explore the <span>World with Us</span></h1>
+      <p>
+        Discover amazing places at exclusive deals. Your adventure starts here!
+      </p>
+      <a href="#" class="btn">Book Now</a>
+    </div>
+    <div class="image">
+      <img src="https://template.canva.com/EAGDPWStJVw/1/0/1600w-DWrvQRpBR3k.jpg" alt="Travel Image">
+    </div>
+  </div>
+</section>

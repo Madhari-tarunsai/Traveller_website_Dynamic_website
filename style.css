@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.travel-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #fff8f0;
+    animation: zoomIn 0.8s ease-out forwards;
+    transform: scale(0.95);
+}
+
+
+.image-container {
+    flex: 1 1 400px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.content-container {
+    flex: 1 1 400px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    
+}
+
+.content-container h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: orange;
+}
+
+.content-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+.travel-section > div:last-child {
+    flex: 1 1 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.travel-section a {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.travel-section a:hover {
+    color: #0077b5; 
+    transform: scale(1.1);
+}
+
+.travel-section svg {
+    margin-left: 8px;
+    width: 24px;
+    height: 24px;
+}
+.previous-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:#fff8f0; 
+  color:black;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: large;
+  transition: background-color 0.3s ease;
+}
+
+
+

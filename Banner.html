@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour_Planner_Website</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="Main_Navbar">
+      <h1>
+        Trav<span>log</span>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/201/201623.png"
+          alt=""
+        />
+      </h1>
+
+      <button class="toggle-btn" onclick="toggleNavbar()">☰</button>
+
+      <div class="Middle_Navbar" id="middleNav">
+        <a href="">Home</a>
+        <a href="./About.html">About</a>
+        <a href="">Popular</a>
+        <a href="./Services.html">Services</a>
+        <a href="">Contact</a>
+      </div>
+
+      <div class="Left_Navbar" id="leftNav">
+        <span>Admin</span>
+        <span>Login</span>
+      </div>
+    </div>
+
+    <script>
+      function toggleNavbar() {
+        const middleNav = document.getElementById("middleNav");
+        const leftNav = document.getElementById("leftNav");
+
+        middleNav.classList.toggle("active");
+        leftNav.classList.toggle("active");
+      }
+    </script>
+    <!----------------------------------------------Home_page------------------------------------------------>
+    <section class="hero">
+    <div class="content">
+      <h5 class="tagline">Best destinations around the world</h5>
+      <h1 class="headline">
+        Travel, <span class="highlight">enjoy</span><br />
+        and live a new<br />
+        and full life
+      </h1>
+      <p class="description">
+        Built Wicket longer admire do barton vanity itself do in it.<br/>
+        Preferred to sportsmen it engrossed listening. Park gate<br/>
+        sell they west hard for the.
+      </p>
+      <div class="buttons">
+        <a href="#" class="btn primary">Find out more</a>
+      </div>
+    </div>
+    <div class="image">
+      <img src="https://anitahendrieka.com/wp-content/uploads/2015/08/simon-maage-706908-unsplash-1440x962.jpg" alt="Travel Girl with Luggage" />
+    </div>
+  </section>
+
+
+
+  </body>
+</html>
