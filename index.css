@@ -577,7 +577,6 @@ main {
 
 /* festival page */
 
-    /* Header Section */
 header {
   background: #fff8f0;
   padding: 40px 20px;
@@ -621,7 +620,7 @@ header p {
 /* Festival Gallery Section */
 .festival-gallery {
   padding: 60px 20px;
-  background: #fff3e0;
+  background:#fff8f0;
   animation: fadeInUp 1.2s ease;
 }
 
@@ -755,7 +754,7 @@ header p {
 .rides {
   padding: 60px;
   height: 100vh;
-  background:#fff8f0 ;
+  background:lightyellow ;
   animation: fadeIn 1.5s ease-in-out;
 }
 .rides h1, .rides .p1 {
@@ -885,197 +884,3 @@ header p {
   }
 }
 
-/* contact start */
-.contact-container {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  gap: 40px;
-  background-image: url("https://as1.ftcdn.net/v2/jpg/07/80/95/16/1000_F_780951672_cJzVeOxybkHkCkFDIOGUAlcq2ADIHVO7.jpg");
-  background-position:center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  animation: fadeInBg 2s ease-in-out;
-}
-
-@keyframes fadeInBg {
-  from { background-position: top; opacity: 0.8; }
-  to { background-position: center; opacity: 1; }
-}
-
-/* Contact Left Section */
-.contact-left {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 20px;
-  width: 50%;
-  animation: fadeInLeft 1.2s ease-out;
-}
-
-@keyframes fadeInLeft {
-  from { opacity: 0; transform: translateX(-50px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-.contact-left-title h2 {
-  font-weight: 700;
-  color: black;
-  font-size: 42px;
-  margin-bottom: 5px;
-  animation: slideUp 1s ease-in-out;
-}
-
-@keyframes slideUp {
-  from { transform: translateY(30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-.contact-left-title hr {
-  border: none;
-  width: 120px;
-  height: 5px;
-  background-color: black;
-  border-radius: 10px;
-  animation: growBar 1.2s ease;
-}
-
-@keyframes growBar {
-  from { width: 0; }
-  to { width: 120px; }
-}
-
-/* Inputs */
-.contact-inputs {
-  width: 400px;
-  height: 50px;
-  outline: none;
-  padding-left: 25px;
-  font-weight: 500;
-  color: #444;
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 1.5px solid transparent;
-  border-radius: 50px;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-left textarea {
-  height: 140px;
-  padding-top: 15px;
-  border-radius: 20px;
-  resize: none;
-}
-
-.contact-inputs:focus {
-  border: 2px solid #ff994f;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(255, 153, 79, 0.4);
-}
-
-.contact-inputs::placeholder {
-  color: #aaa;
-}
-
-/* Button */
-.contact-left button {
-  display: flex;
-  align-items: center;
-  padding: 15px 30px;
-  font-size: 16px;
-  color: #fff;
-  gap: 10px;
-  border: none;
-  border-radius: 50px;
-  background: linear-gradient(270deg, #ff994f, #fa6d86);
-  cursor: pointer;
-  transition: all 0.4s ease;
-  box-shadow: 0 4px 12px rgba(250, 109, 134, 0.4);
-}
-
-.contact-left button:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 6px 16px rgba(250, 109, 134, 0.6);
-}
-
-/* Right Image */
-.contact-container img {
-  width: 45%;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  animation: fadeInRight 1.3s ease;
-}
-
-@keyframes fadeInRight {
-  from { opacity: 0; transform: translateX(50px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-/* MEDIA QUERIES */
-
-/* Wall TVs / Large Screens */
-@media (min-width: 1600px) {
-  .contact-left-title h2 {
-    font-size: 52px;
-  }
-  .contact-inputs {
-    height: 60px;
-    font-size: 18px;
-  }
-  .contact-container {
-    padding: 0 80px;
-  }
-}
-
-/* Laptops */
-@media (max-width: 1200px) {
-  .contact-inputs {
-    width: 100%;
-    max-width: 100%;
-  }
-  .contact-container img {
-    width: 40%;
-  }
-}
-
-/* Tablets */
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-    padding: 40px 20px;
-    text-align: center;
-  }
-  .contact-left {
-    width: 100%;
-    align-items: center;
-  }
-  .contact-container img {
-    width: 90%;
-    margin-top: 20px;
-  }
-  .contact-left-title h2 {
-    font-size: 28px;
-  }
-}
-
-/* Mobile Devices */
-@media (max-width: 480px) {
-  .contact-left-title h2 {
-    font-size: 24px;
-  }
-  .contact-inputs {
-    width: 100%;
-    max-width: 90%;
-  }
-  .contact-left button {
-    width: 100%;
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-}
-
-/* footer start */

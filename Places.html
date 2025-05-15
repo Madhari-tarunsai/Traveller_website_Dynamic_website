@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visting_Places</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visiting Places</title>
+  <link rel="stylesheet" href="Places.css" />
+  <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGcQzbMqyftOhRJV1FF93KIdZ9n4SxB7VEJA&s" type="image/x-icon">
 </head>
 <body>
-    
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="/Banner.html" class="nav-logo">TravLog</a>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <div class="nav-center">
+        <input type="text" class="search-input" placeholder="Search places..." id="searchInput">
+        <button class="btn search-btn" onclick="searchPlaces()">Search</button>
+      </div>
+      <div class="nav-right">
+        <button class="btn add-card-btn">Add Card</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Best place in <span style="color: orangered;">India...</span></h1>
+    <div id="cardContainer" class="card-container"></div>
+  </div>
+
+  <script>
+    // Navbar menu toggle function
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('show');
+    }
+
+    // Fetch places data and create cards
+    fetch('https://67f0dd25c733555e24ab6ba1.mockapi.io/places')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('cardContainer');
+
+        data.forEach(place => {
+          const card = document.createElement('div');
+          card.className = 'card';
+
+          const image = document.createElement('img');
+          image.src = place.image;
+          image.alt = place.title;
+
+          const title = document.createElement('h2');
+          title.textContent = place.title;
+
+          const description = document.createElement('p');
+          description.textContent = place.description;
+
+          const location = document.createElement('p');
+          location.innerHTML = `<strong>Location:</strong> ${place.location || "N/A"}`;
+
+          const rating = document.createElement('p');
+          rating.innerHTML = `<strong>Rating:</strong> ${place.rating || "Not Rated"}`;
+
+          const cost = document.createElement('p');
+          cost.innerHTML = `<strong>Cost:</strong> $${place.cost || "0"}`;
+
+          const viewButton = document.createElement('button');
+          viewButton.textContent = 'View';
+          viewButton.className = 'btn view-btn';
+          viewButton.onclick = () => {
+            if (confirm('Do you want to view more details?')) {
+              window.location.href = 'details.html';
+            }
+          };
+
+          const addToCartButton = document.createElement('button');
+          addToCartButton.textContent = 'Add to Cart';
+          addToCartButton.className = 'btn cart-btn';
+
+          const buttonsDiv = document.createElement('div');
+          buttonsDiv.className = 'card-buttons';
+          buttonsDiv.append(viewButton, addToCartButton);
+
+          card.append(image, title, description, location, rating, cost, buttonsDiv);
+          container.appendChild(card);
+        });
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  </script>
 </body>
 </html>
