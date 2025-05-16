@@ -883,4 +883,175 @@ header p {
     height: 250px;
   }
 }
+/* review */
+.reviews {
+  padding: 40px;
+  background-color: lightyellow;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.reviews-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeInDown 1s ease;
+}
+
+.reviews-title span {
+  color: purple;
+  font-style: italic;
+}
+
+/* Optional animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.review-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.review-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.review-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.review-content p {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.stars {
+  color: gold;
+  font-size: 18px;
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .reviews {
+    padding: 20px;
+  }
+
+  .reviews-title {
+    font-size: 2rem;
+  }
+
+  .review-card {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .review-content p {
+    font-size: 13px;
+  }
+
+  .stars {
+    font-size: 16px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .review-card {
+    width: 45%;
+  }
+
+  .reviews-title {
+    font-size: 2.5rem;
+  }
+
+  .review-content p {
+    font-size: 14px;
+  }
+
+  .stars {
+    font-size: 18px;
+  }
+}
+
+/* Laptops */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .review-card {
+    width: 30%;
+  }
+
+  .reviews-title {
+    font-size: 3rem;
+  }
+
+  .review-content p {
+    font-size: 15px;
+  }
+
+  .stars {
+    font-size: 20px;
+  }
+}
+
+/* Wall TVs / Large Screens */
+@media (min-width: 1441px) {
+  .review-card {
+    width: 20%;
+  }
+
+  .reviews-title {
+    font-size: 3.5rem;
+  }
+
+  .review-content p {
+    font-size: 16px;
+  }
+
+  .stars {
+    font-size: 22px;
+  }
+}
+
 
