@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Method</title>
+    <link rel="stylesheet" href="./Payment.css">
+    <link
+      rel="shortcut icon"
+      href="https://cdn.pixabay.com/photo/2021/03/19/13/40/online-6107598_1280.png"
+      type="image/x-icon"
+    />
+    
+  </head>
+  <body>
+    <a href="booking.html" class="back-arrow">&#8592; Back</a>
+
+    <div class="payment-container">
+      <h1>Payment Method</h1>
+      <input type="text" placeholder="Cardholder Name" />
+      <input type="text" placeholder="Card Number" />
+      <div class="row">
+        <input type="text" placeholder="MM/YY" />
+        <input type="text" placeholder="CVV" />
+      </div>
+      <button>Submit</button>
+
+      <div class="or-divider">(or)</div>
+      <hr />
+
+      <!-- Payment Options with Icons -->
+      <div class="alt-payments">
+        <a href="scanner.html" target="_blank">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/044/626/012/non_2x/white-google-pay-logotype-on-light-blue-background-logo-mobile-payment-system-electronic-wallet-contactless-nfc-for-android-operating-system-gpay-editorial-free-vector.jpg"
+            alt="Google Pay"
+          />Google Pay</a
+        >
+        <a href="scanner.html" target="_blank">
+          <img
+            src="https://cdn.freelogovectors.net/wp-content/uploads/2023/11/phonepelogo-freelogovectors.net_.png"
+            alt="PhonePe"
+          />PhonePe</a
+        >
+        <a href="scanner.html" target="_blank">
+          <img
+            src="https://play-lh.googleusercontent.com/KRQ7JB6faUWiSt-1SHfcMVOipDMjU5scSPhLttsc9Mc6c5nMiAEKZuIn0_slAz3o0Dc=w600-h300-pc0xffffff-pd"
+            alt="Paytm"
+          />Paytm</a
+        >
+      </div>
+    </div>
+
+    <script>
+      document.querySelector("button").addEventListener("click", function () {
+        const cardholder = document
+          .querySelector('input[placeholder="Cardholder Name"]')
+          .value.trim();
+        const cardNumber = document
+          .querySelector('input[placeholder="Card Number"]')
+          .value.trim();
+        const expiry = document
+          .querySelector('input[placeholder="MM/YY"]')
+          .value.trim();
+        const cvv = document
+          .querySelector('input[placeholder="CVV"]')
+          .value.trim();
+
+        if (!cardholder || !cardNumber || !expiry || !cvv) {
+          alert("Please fill in all the details.");
+          return;
+        }
+
+        alert("Payment completed successfully!");
+        window.location.href = "Banner.html"; 
+      });
+    </script>
+  </body>
+</html>
