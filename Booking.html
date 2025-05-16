@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book My Trip</title>
+    <link rel="stylesheet" href="./Booking.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="title">BOOK MY TRIP</h1>
+      <p class="subtitle">Fusce turpis nisi aliquam facilisis elit.</p>
+
+      <div class="form-box">
+        <p class="description">
+          Offers a quick and easy way to book tickets online
+        </p>
+
+        <div class="transport-options">
+          <label
+            ><input type="radio" name="mode" value="Flight" /> Flight</label
+          >
+          <label
+            ><input type="radio" name="mode" value="Train" checked />
+            Train</label
+          >
+          <label><input type="radio" name="mode" value="Bus" /> Bus</label>
+        </div>
+
+        <form id="bookingForm">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="date" name="date" required />
+
+          <div class="row">
+            <input
+              type="text"
+              name="destination"
+              placeholder="Destination City"
+              required
+            />
+            <select name="place" required>
+              <option value="">Select Place</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Pune">Pune</option>
+              <option value="Ahmedabad">Ahmedabad</option>
+              <option value="Goa">Goa</option>
+              <option value="Jaipur">Jaipur</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <select name="adults" required>
+              <option value="">Adults</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3+">3+</option>
+            </select>
+            <select name="children" required>
+              <option value="">Children</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2+">2+</option>
+            </select>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="card-container" id="cardContainer"></div>
+
+      <footer>
+        © 2017 Book My Trip. All rights reserved | Design by W3layouts
+      </footer>
+    </div>
+
+    <script>
+      const form = document.getElementById("bookingForm");
+      const cardContainer = document.getElementById("cardContainer");
+
+      let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+      function createCard(data) {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+    <h3>${data.name}</h3>
+    <p><strong>Date:</strong> ${data.date}</p>
+    <p><strong>Destination:</strong> ${data.destination}</p>
+    <p><strong>Place:</strong> ${data.place}</p>
+    <p><strong>Adults:</strong> ${data.adults}, <strong>Children:</strong> ${data.children}</p>
+    <p><strong>Mode:</strong> ${data.mode}</p>
+    <button class="pay-btn">Payment</button>
+    <button class="update-btn">Update</button>
+    <button class="delete-btn">Delete</button>
+  `;
+
+        card.querySelector(".delete-btn").addEventListener("click", () => {
+          bookings = bookings.filter(
+            (b) => b.name.toLowerCase() !== data.name.toLowerCase()
+          );
+          localStorage.setItem("bookings", JSON.stringify(bookings));
+          card.remove();
+        });
+
+        card.querySelector(".update-btn").addEventListener("click", () => {
+          form.name.value = data.name;
+          form.date.value = data.date;
+          form.destination.value = data.destination;
+          form.place.value = data.place;
+          form.adults.value = data.adults;
+          form.children.value = data.children;
+          document.querySelector(
+            `input[name="mode"][value="${data.mode}"]`
+          ).checked = true;
+
+          bookings = bookings.filter(
+            (b) => b.name.toLowerCase() !== data.name.toLowerCase()
+          );
+          localStorage.setItem("bookings", JSON.stringify(bookings));
+          card.remove();
+        });
+
+        card.querySelector(".pay-btn").addEventListener("click", () => {
+          window.location.href = "payment.html";
+        });
+
+        cardContainer.appendChild(card);
+      }
+
+      bookings.forEach(createCard);
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const values = {};
+        let filled = true;
+
+        formData.forEach((value, key) => {
+          if (!value) filled = false;
+          values[key] = value;
+        });
+
+        const mode = document.querySelector('input[name="mode"]:checked');
+        if (!mode) filled = false;
+        values["mode"] = mode ? mode.value : "";
+
+        if (!filled) {
+          alert("Please fill the details sir......");
+          return;
+        }
+
+        if (
+          bookings.some(
+            (b) => b.name.toLowerCase() === values.name.toLowerCase()
+          )
+        ) {
+          alert("This name is already booked. Please use a unique name.");
+          return;
+        }
+
+        bookings.push(values);
+        localStorage.setItem("bookings", JSON.stringify(bookings));
+
+        createCard(values);
+
+        form.reset();
+      });
+    </script>
+  </body>
+</html>

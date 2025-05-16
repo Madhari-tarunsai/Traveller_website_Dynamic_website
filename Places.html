@@ -65,7 +65,7 @@
           rating.innerHTML = `<strong>Rating:</strong> ${place.rating || "Not Rated"}`;
 
           const cost = document.createElement('p');
-          cost.innerHTML = `<strong>Cost:</strong> $${place.cost || "0"}`;
+          cost.innerHTML =  place.cost
 
           const viewButton = document.createElement('button');
           viewButton.textContent = 'View';
@@ -73,6 +73,7 @@
           viewButton.onclick = () => {
             if (confirm('Do you want to view more details?')) {
               window.location.href = 'details.html';
+             
             }
           };
 

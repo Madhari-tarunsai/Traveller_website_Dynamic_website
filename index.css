@@ -1138,5 +1138,189 @@ header p {
         justify-content: center;
       }
     }
+/* contact page */
+/* Base Styles (for desktops and laptops by default) */
+.contact-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* overlay color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.overlay {
+  width: 90%;
+  max-width: 1200px;
+}
+
+.contact-content {
+  display: flex;
+  background-color: transparent;
+  color: white;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.left {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 30px;
+}
+
+.left h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.left p {
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.info-box {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.info-box .icon {
+  font-size: 24px;
+  background: white;
+  color: #333;
+  padding: 12px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.info-box h4 {
+  margin-bottom: 5px;
+  color: #00bcd4;
+}
+
+.right {
+  background: white;
+  color: #333;
+  flex: 1;
+  min-width: 300px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.right h2 {
+  margin-bottom: 20px;
+}
+
+.right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.right input,
+.right textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+}
+
+.right textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.right button {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.right button:hover {
+  background-color: #0097a7;
+}
+
+/* Tablet landscape and smaller laptops (screen < 1024px) */
+@media (max-width: 1024px) {
+  .left h2,
+  .right h2 {
+    font-size: 28px;
+  }
+
+  .right {
+    padding: 25px;
+  }
+}
+
+/* Tablets portrait (screen < 768px) */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    margin: 0 0 30px 0;
+  }
+
+  .right {
+    padding: 20px;
+  }
+
+  .left h2,
+  .right h2 {
+    font-size: 24px;
+  }
+}
+
+/* Phones (screen < 480px) */
+@media (max-width: 480px) {
+  .info-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-box .icon {
+    margin-bottom: 10px;
+  }
+
+  .right input,
+  .right textarea {
+    font-size: 14px;
+  }
+
+  .right button {
+    font-size: 14px;
+  }
+}
+
+/* Large TVs or 4K (screen > 1600px) */
+@media (min-width: 1600px) {
+  .left h2,
+  .right h2 {
+    font-size: 40px;
+  }
+
+  .right {
+    padding: 40px;
+  }
+
+  .right input,
+  .right textarea {
+    font-size: 18px;
+  }
+
+  .right button {
+    font-size: 18px;
+  }
+}
+
 
 
