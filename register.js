@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCASQRvxe3G7upsJqD-0Ru-ljVNB_REbFw",
@@ -20,8 +20,8 @@ window.onload = function () {
   button.addEventListener("click", (event) => {
     event.preventDefault();
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const email = document.getElementById("mail").value;
+    const password = document.getElementById("pswd").value;
 
     // Email validation
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -30,9 +30,9 @@ window.onload = function () {
       return;
     }
 
-    // Password validation (ensuring it's not empty)
-    if (password.length === 0) {
-      alert("Password cannot be empty.");
+    // Password validation (Firebase requires min 6 characters)
+    if (password.length < 6) {
+      alert("Password must be at least 6 characters long.");
       return;
     }
 
@@ -42,10 +42,10 @@ window.onload = function () {
       return;
     }
 
-    signInWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        alert("Login Successful");
-        window.location.href = "Banner.html";
+        alert("Account created successfully!");
+        window.location.href = "index.html";
       })
       .catch((error) => {
         alert(error.message);
