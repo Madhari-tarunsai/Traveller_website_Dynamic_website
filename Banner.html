@@ -34,8 +34,8 @@
       </div>
 
       <div class="Left_Navbar" id="leftNav">
-        <span>Admin</span>
-        <span>Login</span>
+        <span id="admin">Admin</span>
+        <span id="login">Login</span>
       </div>
     </div>
 
@@ -47,6 +47,17 @@
         middleNav.classList.toggle("active");
         leftNav.classList.toggle("active");
       }
+      let btn = document.getElementById("admin");
+      btn.addEventListener("click", () => {
+        alert("You want to go to Manager page");
+        window.location = "./Maneger.html";
+      });
+
+      let btn1 = document.getElementById("login");
+      btn1.addEventListener("click", () => {
+        alert("You want to go to Login");
+        window.location = "./index.html";
+      });
     </script>
     <!----------------------------------------------Home_page------------------------------------------------>
     <section class="hero">
