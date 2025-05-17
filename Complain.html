@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Complaint Page</title>
+  <link rel="stylesheet" href="Complain.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Complaint Portal</h1>
+    <form id="complaintForm">
+      <input type="text" id="title" placeholder="Complaint Title" required />
+      <textarea id="description" placeholder="Complaint Description" required></textarea>
+      <button type="submit">Submit Complaint</button>
+    </form>
+
+    <div id="complaintList" class="card-container"></div>
+  </div>
+
+  <script src="Complain.js"></script>
+</body>
+</html>

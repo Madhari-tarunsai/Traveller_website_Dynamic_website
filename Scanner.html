@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment</title>
+  <link rel="stylesheet" href="Scanner.css">
+</head>
+<body>
+  <div class="payment-container">
+    <h1>Payment Method</h1>
+    <form>
+      <input
+        type="tel"
+        placeholder="Phone number"
+        pattern="[0-9]{10}"
+        title="Enter a 10-digit phone number"
+        required
+      />
+      <p>(or)</p>
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/800px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="scanner">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

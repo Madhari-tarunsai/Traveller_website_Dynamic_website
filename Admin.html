@@ -18,8 +18,15 @@
             <h1>Complaint Section</h1>
             <p>View and respond to complaints.</p>
             <img src="https://www.scanlanspropertymanagement.com/wp-content/uploads/gergheer.jpg" alt="Complaint Icon"><br><br><br>
-            <button>Go to Complaints</button>
+            <button id="complaint">Go to Complaints</button>
         </div>
+        <script>
+            let btn=document.getElementById("complaint")
+            btn.addEventListener("click",()=>{
+                alert("you want to complain")
+                window.location="./complain.html"
+            })
+        </script>
     </section>
 </body>
 </html>
