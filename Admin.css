@@ -53,3 +53,28 @@ body {
 .card button:hover {
     background-color: #0056b3;
 }
+.btn1 {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 20px;
+   
+}
+
+.btn1 button {
+    padding: 10px 18px;
+    background-color:steelblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn1 button:hover {
+    background-color: #1d2124;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+

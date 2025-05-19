@@ -10,7 +10,6 @@
     />
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-    <script type="module" src="login.js" defer></script>
     <link
       rel="shortcut icon"
       href="https://st4.depositphotos.com/11953928/28841/v/450/depositphotos_288414390-stock-illustration-travel-adventure-calligraphy-messsage-font.jpg"
@@ -22,10 +21,11 @@
     </style>
   </head>
   <body>
+    
     <div class="container">
       <h1 style="color: black">Admin_Login</h1>
       <form id="loginForm">
-        <input type="email" id="email" placeholder="Email" required />
+        <input type="name" id="name" placeholder="Username" required />
         <input type="password" id="password" placeholder="Password" required />
         <button type="submit" id="btn">Login</button>
       </form>
@@ -33,5 +33,24 @@
         <p>login as guest...?<a href="./Admin.html" id="signup">Guest</a></p>
       </div>
     </div>
+    <script>
+  let btn1 = document.getElementById("name");
+  let btn2 = document.getElementById("password");
+  let btn3 = document.getElementById("btn");
+
+  let name1 = "tarunsaimadhari";
+  let psd = "Tarunsai@04062002";
+
+  document.getElementById("loginForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (btn1.value === name1 && btn2.value === psd) {
+      location.href = "./Admin.html";
+    } else {
+      alert("Invalid Username or Password");
+    }
+  });
+</script>
+
   </body>
 </html>

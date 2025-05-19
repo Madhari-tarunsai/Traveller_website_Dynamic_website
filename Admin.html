@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="Admin.css">
 </head>
 <body>
+    <div class="btn1">
+        <button id="btn2">Back</button>
+        <button id="btn3">Logout</button>
+    </div>
     <section class="sec1">
         <div class="card">
             <h1>Admin Section</h1>
@@ -34,6 +38,14 @@
                 let name1=prompt("Admin please enter ur name")
                 location.href="./DashBoard.html"
             }
+            })
+            let abc=document.getElementById("btn2")
+            abc.addEventListener("click",()=>{
+                location.href="./Maneger.html"
+            })
+             let def=document.getElementById("btn3")
+            def.addEventListener("click",()=>{
+                location.href="./index.html"
             })
         </script>
     </section>
