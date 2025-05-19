@@ -12,7 +12,7 @@
             <h1>Admin Section</h1>
             <p>Manage users and content.</p>
             <img src="https://base.vn/wp-content/uploads/2024/06/admin-la-gi.webp" alt="Admin Icon"><br><br><br>
-            <button>Go to Admin</button>
+            <button id="admin-page">Go to Admin</button>
         </div>
         <div class="card">
             <h1>Complaint Section</h1>
@@ -25,6 +25,15 @@
             btn.addEventListener("click",()=>{
                 alert("you want to complain")
                 window.location="./complain.html"
+            })
+            let btn1=document.getElementById("admin-page")
+            btn1.addEventListener("click",()=>{
+                alert("only admin login")
+            let name="tarunsai".toLowerCase()
+            if(name==="tarunsai"){
+                let name1=prompt("Admin please enter ur name")
+                location.href="./DashBoard.html"
+            }
             })
         </script>
     </section>

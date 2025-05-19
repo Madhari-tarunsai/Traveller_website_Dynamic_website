@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore Restaurants</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+    /* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fffdf7;
+  color: #333;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  color: #fff;
+  padding: 2rem 1rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.tagline {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Restaurant Grid */
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+/* Restaurant Card */
+.restaurant-card {
+  background: #fff0f5;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease;
+}
+.restaurant-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+.restaurant-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 1rem;
+}
+.card-content h2 {
+  font-size: 1.5rem;
+  color: #444;
+}
+.card-content p {
+  margin-top: 0.5rem;
+}
+.rating {
+  margin-top: 0.8rem;
+  font-weight: bold;
+  color: #ff9800;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+</style>
+<body>
+
+  <header class="header5">
+    <h1 class="logo">Discover Perlex Restaurants</h1>
+    <p class="tagline">Top-rated places to dine near you</p>
+  </header>
+
+  <section class="restaurant-grid">
+    <div class="restaurant-card">
+      <img src="https://via.placeholder.com/300x200?text=Perlex+Cafe" alt="Perlex Cafe" />
+      <div class="card-content">
+        <h2>Perlex Cafe</h2>
+        <p>Cozy corner cafe known for coffee and calm vibes.</p>
+        <p class="rating">⭐ 4.7/5</p>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <img src="https://via.placeholder.com/300x200?text=Ocean+Delights" alt="Ocean Delights" />
+      <div class="card-content">
+        <h2>Ocean Delights</h2>
+        <p>Seafood specialty spot with oceanfront views.</p>
+        <p class="rating">⭐ 4.5/5</p>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <img src="https://via.placeholder.com/300x200?text=Urban+Tadka" alt="Urban Tadka" />
+      <div class="card-content">
+        <h2>Urban Tadka</h2>
+        <p>Spicy North Indian flavors in a modern setup.</p>
+        <p class="rating">⭐ 4.8/5</p>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <img src="https://via.placeholder.com/300x200?text=The+Green+Table" alt="The Green Table" />
+      <div class="card-content">
+        <h2>The Green Table</h2>
+        <p>Organic and vegan dining experience for all.</p>
+        <p class="rating">⭐ 4.6/5</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Perlex Restaurant Directory. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
