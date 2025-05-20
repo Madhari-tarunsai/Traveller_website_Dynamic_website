@@ -155,6 +155,9 @@ Future integration with mobile apps possible
 
 #FOOTER_PAGE
 
+![Screenshot (245)](https://github.com/user-attachments/assets/1dcf244e-4ad6-4457-9c47-e646373a26c0)
+
+
 
 
 
