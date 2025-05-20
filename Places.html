@@ -10,6 +10,15 @@
       href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGcQzbMqyftOhRJV1FF93KIdZ9n4SxB7VEJA&s"
       type="image/x-icon"
     />
+    <style>
+      /* Simple example CSS for location text */
+      .location {
+        font-size: 1rem;
+        color: #555;
+        margin: 5px 0;
+      }
+      /* You can add more CSS in Places.css */
+    </style>
   </head>
   <body>
     <nav class="navbar">
@@ -65,8 +74,12 @@
           const title = document.createElement("h1");
           title.textContent = place.title;
 
+          const location = document.createElement("p");
+          location.textContent = place.location;
+          location.className = "location";
+
           const cost = document.createElement("h3");
-          cost.innerHTML = place.cost;
+          cost.textContent = place.cost;
 
           const viewButton = document.createElement("button");
           viewButton.textContent = "View";
@@ -81,7 +94,7 @@
           buttonsDiv.className = "card-buttons";
           buttonsDiv.append(viewButton, addToCartButton);
 
-          card.append(image, title, cost, buttonsDiv);
+          card.append(image, title, location, cost, buttonsDiv);
           container.appendChild(card);
         });
       }
