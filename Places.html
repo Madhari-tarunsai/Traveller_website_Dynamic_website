@@ -40,9 +40,6 @@
             Search
           </button>
         </div>
-        <div class="nav-right">
-          <button class="btn add-card-btn">Add Card</button>
-        </div>
       </div>
     </nav>
 
@@ -86,13 +83,9 @@
           viewButton.className = "btn view-btn";
           viewButton.onclick = () => showDetails(place);
 
-          const addToCartButton = document.createElement("button");
-          addToCartButton.textContent = "Add to Cart";
-          addToCartButton.className = "btn cart-btn";
-
           const buttonsDiv = document.createElement("div");
           buttonsDiv.className = "card-buttons";
-          buttonsDiv.append(viewButton, addToCartButton);
+          buttonsDiv.append(viewButton);
 
           card.append(image, title, location, cost, buttonsDiv);
           container.appendChild(card);

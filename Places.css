@@ -74,10 +74,7 @@ body {
   color: white;
 }
 
-.add-card-btn {
-  background-color: #4caf50;
-  color: white;
-}
+
 
 /* Main Container */
 .container {
@@ -114,13 +111,15 @@ body {
 
 .card-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Changed from space-between to center */
+  gap: 10px;                /* Optional: adds space between buttons if more than one */
   margin-top: 10px;
 }
 
 .view-btn {
   background-color: #1e90ff;
   color: white;
+
 }
 
 .cart-btn {

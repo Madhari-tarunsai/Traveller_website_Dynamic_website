@@ -608,6 +608,61 @@
         </div>
       </div>
     </section>
+    <!----------------------------------------clicent reviews--------------------------------------------->
+    <div class="container9">
+  <section class="review-section5">
+    <div class="review-content5">
+      <h1>Explore the <span>World with Us...</span></h1>
+      <p>Your <span>reviews</span> are <span>very helpful</span> to us!</p>
+      <form id="reviewForm">
+        <input type="text" id="name" placeholder="Enter your name" required />
+        <input type="text" id="reviewText" placeholder="Share your experience..." required />
+        <select id="rating" required>
+          <option value="">Give a rating</option>
+          <option value="⭐">⭐</option>
+          <option value="⭐⭐">⭐⭐</option>
+          <option value="⭐⭐⭐">⭐⭐⭐</option>
+          <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+          <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+        </select>
+        <button type="submit">Submit Review</button>
+      </form>
+
+      <!-- 🆕 Cards show up here, below the form -->
+      <div class="card-container6" id="cardContainer"></div>
+    </div>
+  </section>
+  <script>
+  const form = document.getElementById("reviewForm");
+  const cardContainer = document.getElementById("cardContainer");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const review = document.getElementById("reviewText").value;
+    const rating = document.getElementById("rating").value;
+
+    alert("Your review has been added!");
+
+    const card = document.createElement("div");
+    card.classList.add("review-card5");
+    card.innerHTML = `
+      <h3>${name}</h3>
+      <p>${review}</p>
+      <span class="rating">${rating}</span>
+    `;
+
+    cardContainer.appendChild(card);
+    form.reset();
+  });
+</script>
+
+</div>
+
+
+
+
     <!-----------------------------------------------Contact_page-------------------------------------------------->
     <section class="contact-section" id="contact">
       <div class="overlay">

@@ -1475,5 +1475,192 @@ header p {
   font-weight: bold;
   color: #ff9800;
 }
+/* review_02 */
+/* Wrapper container */
+.container9 {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  overflow-y: auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  flex-direction: column;
+}
 
+/* Review form section */
+.review-section5 {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.review-content5 h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.review-content5 h1 span {
+  color: #ffd700;
+}
+
+.review-content5 p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.review-content5 p span {
+  font-weight: bold;
+  color: #ffeb3b;
+}
+
+/* Form elements */
+form input,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+form input::placeholder,
+form select {
+  color: #555;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #f50057;
+}
+
+/* Review cards container */
+.card-container6 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+/* Individual review card */
+.review-card5 {
+  background: #ffffffcc;
+  color: #333;
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.review-card5:hover {
+  transform: translateY(-5px);
+}
+
+.review-card5 h3 {
+  margin-bottom: 10px;
+  color: #0072ff;
+}
+
+.review-card5 p {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.review-card5 .rating {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #ffab00;
+  font-weight: bold;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+/* Phones */
+@media only screen and (max-width: 600px) {
+  .review-content5 h1 {
+    font-size: 1.4rem;
+  }
+
+  .review-section5 {
+    padding: 20px;
+    max-width: 95%;
+  }
+
+  form input,
+  form select,
+  form button {
+    font-size: 0.9rem;
+  }
+
+  .review-card5 {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .review-section5 {
+    max-width: 90%;
+  }
+
+  .review-content5 h1 {
+    font-size: 1.7rem;
+  }
+
+  .review-card5 {
+    width: 45%;
+  }
+}
+
+/* Laptops and Desktops */
+@media only screen and (min-width: 1025px) {
+  .review-section5 {
+    max-width: 600px;
+  }
+
+  .review-content5 h1 {
+    font-size: 2rem;
+  }
+
+  .review-card5 {
+    width: 220px;
+  }
+}
 
