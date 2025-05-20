@@ -130,6 +130,24 @@ Future integration with mobile apps possible
 ![Screenshot (241)](https://github.com/user-attachments/assets/f36249f1-f411-466e-8d54-b9f2be4cb882)
 
 
+#VISTING_PLACE_PAGE
+
+![Screenshot (252)](https://github.com/user-attachments/assets/0a99705f-3538-49bf-8e33-6dfdc561e82d)
+
+![Screenshot (253)](https://github.com/user-attachments/assets/398011ad-c0e3-4306-88f1-a6df736d0789)
+
+![Screenshot (254)](https://github.com/user-attachments/assets/183aa8a2-4291-4f20-acc2-9731bbdf8005)
+
+![Screenshot (255)](https://github.com/user-attachments/assets/e2c071b1-6c45-4886-964b-6cc0bbf8f632)
+
+![Screenshot (256)](https://github.com/user-attachments/assets/baaab4fb-ea0d-47a1-917a-e731ca1ffeb5)
+
+#BOOKING_TRIP_PAGE
+
+![Screenshot (257)](https://github.com/user-attachments/assets/7cb9f90d-618f-44d6-9afa-f2c1a24fb5ca)
+
+
+
 #REVIEWS_PAGE
 
 ![Screenshot (242)](https://github.com/user-attachments/assets/c60c977d-dd59-4dd8-bbf4-4c6404ec0670)
