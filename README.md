@@ -89,6 +89,91 @@ Future integration with mobile apps possible
 ![Screenshot (246)](https://github.com/user-attachments/assets/90e97db0-d619-46f9-a029-bd4d4dfe8ab5)
 
 
+#DESTINATION_PAGE
+
+![Screenshot (247)](https://github.com/user-attachments/assets/44a16cad-f2fa-42d5-a1dc-60ca2094ef30)
+
+
+#SERVECES_PAGE
+
+![Screenshot (248)](https://github.com/user-attachments/assets/73bd7054-7afb-46f1-baca-93c5cd91095c)
+
+
+
+#SUMMER_TRIP_PAGE
+
+![Screenshot (235)](https://github.com/user-attachments/assets/9275696b-a294-4bc4-8b8a-d98afe4060f0)
+
+
+#FESTIVAL_TRIP_PAGE
+
+![Screenshot (236)](https://github.com/user-attachments/assets/5e08d133-82b0-49ff-a6b7-ceaf5fcd3a31)
+
+![Screenshot (237)](https://github.com/user-attachments/assets/4967008a-95b2-4be6-95e9-362808bfb8d5)
+
+
+#EDUCATION_TRIP_PAGE
+
+![Screenshot (238)](https://github.com/user-attachments/assets/5da3f00a-0198-4160-8fa8-7cf22af8ec5a)
+
+
+#FOOD_PALCE_PAGE
+
+
+![Screenshot (239)](https://github.com/user-attachments/assets/24757054-7ed1-49bb-9050-b128109ad5fc)
+
+![Screenshot (240)](https://github.com/user-attachments/assets/9c81b049-81fe-47ad-9b0d-427b190fc461)
+
+
+#TRAVELLING_TRIP_PAGE
+
+![Screenshot (241)](https://github.com/user-attachments/assets/f36249f1-f411-466e-8d54-b9f2be4cb882)
+
+
+#REVIEWS_PAGE
+
+![Screenshot (242)](https://github.com/user-attachments/assets/c60c977d-dd59-4dd8-bbf4-4c6404ec0670)
+
+![Screenshot (243)](https://github.com/user-attachments/assets/93c89e63-0085-41df-9f4a-aaad32719040)
+
+
+#ADMIN_PAGE
+
+![Screenshot (249)](https://github.com/user-attachments/assets/a51afcc5-1945-4a9f-be49-5f1f36f95ff7)
+
+![Screenshot (250)](https://github.com/user-attachments/assets/9a055e80-75b3-4228-a29e-8e77cce066f6)
+
+#ADMIN_DASHBOARD_PAGE
+
+![Screenshot (251)](https://github.com/user-attachments/assets/40e3504d-98ab-4d0b-990f-a1e84cd769e5)
+
+
+#CONTACT_PAGE
+
+![Screenshot (244)](https://github.com/user-attachments/assets/79d30e43-d57d-47ab-afbf-8f82d74a8e68)
+
+
+#FOOTER_PAGE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
