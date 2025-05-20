@@ -68,16 +68,31 @@ Future integration with mobile apps possible
 🧭 Project Flow Chart Overview
 
 
-Available Travels
-
-Categories: Summer Trips, Water Trips, Festival Trips, Educational Trips
+#lOGIN_PAGE
 
 
+![Screenshot (232)](https://github.com/user-attachments/assets/66c3f828-9d5e-4a64-94c3-c2ad25cf03a1)
 
-Trip Planner
 
-Add places, activities, and restaurants
+#REGISTRATION_PAGE
 
-View available accommodations
+![Screenshot (233)](https://github.com/user-attachments/assets/27bf695e-8ffe-430a-b4a2-eb984988c16a)
 
-Create & modify day-wise itineraries
+
+#HOME_PAGE
+
+![Screenshot (234)](https://github.com/user-attachments/assets/413d20e9-5f4c-4833-a515-456ac17759a4)
+
+
+#ABOUT_PAGE
+
+![Screenshot (246)](https://github.com/user-attachments/assets/90e97db0-d619-46f9-a029-bd4d4dfe8ab5)
+
+
+
+
+
+
+
+
+
