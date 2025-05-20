@@ -27,7 +27,9 @@
             placeholder="Search places..."
             id="searchInput"
           />
-          <button class="btn search-btn" onclick="searchPlaces()">Search</button>
+          <button class="btn search-btn" onclick="searchPlaces()">
+            Search
+          </button>
         </div>
         <div class="nav-right">
           <button class="btn add-card-btn">Add Card</button>
@@ -35,29 +37,26 @@
       </div>
     </nav>
 
-    
-
     <div class="container">
-      
       <h1>Best place in <span style="color: orangered">India...</span></h1>
       <div id="cardContainer" class="card-container"></div>
-    </div> 
+    </div>
 
     <script>
       let allPlaces = [];
 
       function toggleMenu() {
-        const navLinks = document.getElementById("navLinks");
-        navLinks.classList.toggle("show");
+        document.getElementById("navLinks").classList.toggle("show");
       }
 
       function renderCards(places) {
         const container = document.getElementById("cardContainer");
         container.innerHTML = "";
 
-        places.forEach((place) => {
+        places.forEach((place, index) => {
           const card = document.createElement("div");
-          card.className = "card";
+          card.className = "card fade-in";
+          card.style.animationDelay = `${index * 0.1}s`;
 
           const image = document.createElement("img");
           image.src = place.image;
@@ -72,11 +71,7 @@
           const viewButton = document.createElement("button");
           viewButton.textContent = "View";
           viewButton.className = "btn view-btn";
-          viewButton.onclick = () => {
-            if (confirm("Do you want to view more details?")) {
-              window.location.href = "details.html";
-            }
-          };
+          viewButton.onclick = () => showDetails(place);
 
           const addToCartButton = document.createElement("button");
           addToCartButton.textContent = "Add to Cart";
@@ -91,8 +86,59 @@
         });
       }
 
+      function showDetails(place) {
+        const container = document.getElementById("cardContainer");
+        container.innerHTML = "";
+
+        const card = document.createElement("div");
+        card.className = "detail-card zoom-in";
+
+        const heading = document.createElement("h2");
+        heading.textContent = "View Details";
+        heading.style.color = "orangered";
+        heading.style.marginBottom = "10px";
+
+        const image = document.createElement("img");
+        image.src = place.image;
+        image.alt = place.title;
+
+        const title = document.createElement("h1");
+        title.textContent = place.title;
+
+        const cost = document.createElement("h3");
+        cost.innerHTML = place.cost;
+
+        const description = document.createElement("p");
+        description.innerHTML =
+          "<strong>Description:</strong> " +
+          (place.description || "No details available.");
+
+        const bookButton = document.createElement("button");
+        bookButton.textContent = "Book Now";
+        bookButton.className = "btn book-btn";
+        bookButton.onclick = () => (window.location.href = "booking.html");
+
+        const backButton = document.createElement("button");
+        backButton.textContent = "Back";
+        backButton.className = "btn back-btn";
+        backButton.onclick = () => renderCards(allPlaces);
+
+        card.append(
+          heading,
+          image,
+          title,
+          cost,
+          description,
+          bookButton,
+          backButton
+        );
+        container.appendChild(card);
+      }
+
       function searchPlaces() {
-        const query = document.getElementById("searchInput").value.toLowerCase();
+        const query = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
         const filtered = allPlaces.filter((place) =>
           place.title.toLowerCase().includes(query)
         );
